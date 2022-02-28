@@ -32,8 +32,8 @@
 
 ## Stretch goals
 - multiple animal pages
-- easter egg
 - allowing a user to put an animal up for adoption 
+- create a data page for employees that shows user name, pet, and contact info for all users who submit their cart 
 
 
 ## Functional Requirements
