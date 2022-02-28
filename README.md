@@ -1,5 +1,11 @@
 # PetsRUs
 
+## Group Members
+- Jon Gitter
+- Dwight Lindquist
+- Katrina Hill
+- Ryan McMillan
+
 ## Project Name 
  - Pets R Us
 
