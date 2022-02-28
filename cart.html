@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style type="text/css">
+  </style>
+  
+</head>
+<body>
+    <header>
+      <nav>
+
+      </nav>
+    </header>
+ 
+  <main>
+    <div>
+    <h1>Cart</h1>
+    <p>Please review your cart items for checkout:</p>
+    </div>
+    <div id="table-container" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto;">
+      <div class="name-title-cell">Name</div>
+      <div class="species-title-cell">Species</div>
+    </div>
+    <form action="/actions_page.php">
+    <label for="name:">Name:</label>
+    <input type="text" id="name"><br>
+    <label for="email:">Email address:</label>
+    <input type="text" id="email"><br>
+  </form>
+    <div id="button-container">
+      <button id="checkout-button">Checkout</button>
+      <button id="clear-cart-button">Clear Cart</button>
+    </div>
+  </main>
+</body>
+</html>
