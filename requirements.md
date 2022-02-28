@@ -49,3 +49,4 @@
 5. user "checks out" the animals they want to adopt, sends their contact info to the clinic
 6. user is navigated to thank you page after submitting what animals they want to adopt
 
+
