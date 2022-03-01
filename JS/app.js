@@ -47,30 +47,32 @@ let han = new Animal('han','cat', 10, 'zoomies');
 let myContainer = document.getElementById('profiles');
 
 
-function renderTucker (){
-  let img1 = document.createElement('img');
-  img1.src = allAnimals[0].src;
-  let capt1 = document.createElement('figcaption');
-  // capt1.textContent = 'hello';
+// function renderTucker (){
+//   let img1 = document.createElement('img');
+//   img1.src = allAnimals[0].src;
+//   let capt1 = document.createElement('figcaption');
+//   // capt1.textContent = 'hello';
 
-  let ul = document.createElement('ul');
-  let li1 = document.createElement('li');
-    li1.textContent = allAnimals[0].name;
-    ul.appendChild(li1);
-  let li2 = document.createElement('li');
-    li2.textContent = allAnimals[0].age;
-    ul.appendChild(li2);
-  let li3 = document.createElement('li');
-    li3.textContent = allAnimals[0].interest;
-    ul.appendChild(li3);
+//   let ul = document.createElement('ul');
+//   let li1 = document.createElement('li');
+//     li1.textContent = allAnimals[0].name;
+//     ul.appendChild(li1);
+//   let li2 = document.createElement('li');
+//     li2.textContent = allAnimals[0].age;
+//     ul.appendChild(li2);
+//   let li3 = document.createElement('li');
+//     li3.textContent = allAnimals[0].interest;
+//     ul.appendChild(li3);
 
-  capt1.appendChild(ul);
-  myContainer.appendChild(img1);
-  myContainer.appendChild(capt1);
-}
+//   capt1.appendChild(ul);
+//   myContainer.appendChild(img1);
+//   myContainer.appendChild(capt1);
+// }
 
-renderTucker();
+// renderTucker();
 
+
+// helper function to render images of all pets and information in a `<ul></ul>`
 function renderAnimals (){
   for (let i = 0; i < allAnimals.length; i++){
     let currentImgLoc = document.createElement('img');
@@ -90,7 +92,7 @@ function renderAnimals (){
     li3.textContent = allAnimals[i].interest;
     ul.appendChild(li3);
 
-    currentCapt.appendChild(ul); 
+    currentCapt.appendChild(ul);
     myContainer.appendChild(currentImgLoc);
     myContainer.appendChild(currentCapt);
   }
