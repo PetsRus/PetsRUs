@@ -13,8 +13,13 @@ function Animal (name, species, age, interest){
   allAnimals.push(this); 
 }
 
-let tucker = new Animal('tucker', 'dog', 3, 'hunting'); 
-console.log(allAnimals); 
+let tucker = new Animal('tucker', 'dog', 3, 'hunting');
+let chirpy = new Animal('chirpy', 'bird', 2, 'singing');
+let luke = new Animal('luke','cat', 4, 'lasers');
+
+
+
+// console.log(allAnimals); 
 // let imgWindow = document.getElementById('img-one'); 
 
 let myContainer = document.getElementById('profiles');
@@ -42,7 +47,46 @@ function renderTucker (){
   myContainer.appendChild(capt1); 
 }
 
-renderTucker(); 
+renderTucker();
+
+function renderAnimals (){
+  for (let i = 0; i < allAnimals.length; i++){
+    let currentImgLoc = document.createElement('img');
+    currentImgLoc.src = allAnimals[i].src;
+    let currentCapt = document.createElement('figcaption');
+
+    let ul = document.createElement('ul');
+    let li1 = document.createElement('li');
+    li1.textContent = allAnimals[i].name;
+    ul.appendChild(li1);
+
+    let li2 = document.createElement('li');
+    li2.textContent = allAnimals[i].age;
+    ul.appendChild(li2);
+
+    let li3 = document.createElement('li');
+    li3.textContent = allAnimals[i].interest;
+    ul.appendChild(li3);
+
+    currentCapt.appendChild(ul); 
+    myContainer.appendChild(currentImgLoc);
+    myContainer.appendChild(currentCapt);
+  }
+}
+
+renderAnimals();
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function renderImgs (){
 //   // imgOne.src = allAnimals.tucker.src;
