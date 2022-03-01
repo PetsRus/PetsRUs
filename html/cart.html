@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cart Page</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style type="text/css">
+    .name-title-cell {
+      background-color: darkgrey;
+      font-weight: bold;
+      grid-column-start: 1;
+    }
+
+    .species-title-cell {
+      background-color: darkgrey;
+      font-weight: bold;
+      grid-column-start: 2;
+    }
+
+    .name-cell {
+      grid-column-start: 1;
+    }
+
+    .species-cell {
+      grid-column-start: 2;
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="" alt="" id="">
+      <ul>
+        <li><a href="index.html">Home</a> </li>
+        <li><a href=""></a>About Us</li>
+        <li><a href=""></a>Cart</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div>
+      <h1>Cart</h1>
+      <p>Please review your cart items for checkout:</p>
+    </div>
+    <div id="table-container" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto;">
+      <div class="name-title-cell">Name</div>
+      <div class="species-title-cell">Species</div>
+    </div>
+    <form action="/actions_page.php">
+      <label for="name:">Name:</label>
+      <input type="text" id="name"><br>
+      <label for="email:">Email address:</label>
+      <input type="text" id="email"><br>
+    </form>
+    <div id="button-container">
+      <button id="checkout-button">Checkout</button>
+      <button id="clear-cart-button">Clear Cart</button>
+    </div>
+  </main>
+
+  <footer>
+    <ul>
+      <li>
+        <h2>Contact Us</h2>
+      </li>
+      <li>206-123-9876</li>
+      <li>Contactus@PetsRUs.com</li>
+      <li>17 Adoption Way, Seattle WA, 98096</li>
+    </ul>
+  </footer>
+
+</body>
+
+</html>
