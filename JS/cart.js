@@ -1,4 +1,15 @@
-'use strict'
+'use strict';
+console.log('cart.js');
+
+let retrievedAnimals = localStorage.getItem('stringifiedAnimalsKey');
+let parsedAnimals = JSON.parse(retrievedAnimals);
+console.log(parsedAnimals);
+
+
+
+
+
+
 
 function checkoutClick(event) {
   //get the email value and store it for thank you page
@@ -16,7 +27,7 @@ function clearCartClick(event) {
   localStorage.setItem('key', '[]');
 }
 
-function showCart(){
+function showCart() {
   //get selected animal array from local storage and deserialize it from json
   //...add local storage code here...
   let tableContainer = document.getElementById("table-container");
@@ -26,7 +37,7 @@ function showCart(){
     let nameDiv = document.createElement('div');
     nameDiv.textContent = allAnimals[i].name;
     nameDiv.classList.add('name-cell');
-    nameDiv.classList.add('table-cell');    
+    nameDiv.classList.add('table-cell');
     let speciesDiv = document.createElement('div');
     speciesDiv.textContent = allAnimals[i].species;
     speciesDiv.classList.add('species-cell');
@@ -40,13 +51,13 @@ function showCart(){
     interestDiv.classList.add('interest-cell');
     interestDiv.classList.add('table-cell');
 
-    if(i % 2 == 0){
+    if (i % 2 == 0) {
       nameDiv.classList.add('even-row');
       speciesDiv.classList.add('even-row');
       ageDiv.classList.add('even-row');
       interestDiv.classList.add('even-row');
     }
-    else{
+    else {
       nameDiv.classList.add('odd-row');
       speciesDiv.classList.add('odd-row');
       ageDiv.classList.add('odd-row');
