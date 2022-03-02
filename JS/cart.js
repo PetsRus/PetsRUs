@@ -3,51 +3,54 @@ console.log('cart.js');
 
 let retrievedAnimals = localStorage.getItem('stringifiedAnimalsKey');
 let parsedAnimals = JSON.parse(retrievedAnimals);
-console.log(parsedAnimals);
+// console.log(parsedAnimals);
 
 
 
 
 
+// function checkoutClick(event) {
+//   //get the email value and store it for thank you page
+//   let emailInput = document.getElementById('email');
+//   let userEmail = emailInput.value;
+//   localStorage.setItem('user-email', userEmail);
+//   //get name value and store it for thank you page
+//   let nameInput = document.getElementById('name');
+//   let userName = nameInput.value;
+//   localStorage.setItem('user-name', userName);
+// }
+
+// function clearCartClick(event) {
+//   console.log(event);
+//   localStorage.setItem('key', '[]');
+// }
 
 
-function checkoutClick(event) {
-  //get the email value and store it for thank you page
-  let emailInput = document.getElementById('email');
-  let userEmail = emailInput.value;
-  localStorage.setItem('user-email', userEmail);
-  //get name value and store it for thank you page
-  let nameInput = document.getElementById('name');
-  let userName = nameInput.value;
-  localStorage.setItem('user-name', userName);
-}
 
-function clearCartClick(event) {
-  console.log(event);
-  localStorage.setItem('key', '[]');
-}
+// need something that populates parsed data into a table
+
 
 function showCart() {
   //get selected animal array from local storage and deserialize it from json
   //...add local storage code here...
   let tableContainer = document.getElementById("table-container");
   //cycle through array and show selected animals in table
-  for (let i = 0; i < allAnimals.length; i++) {
+  for (let i = 0; i < parsedAnimals.length; i++) {
     //create two divs and place them in the container
     let nameDiv = document.createElement('div');
-    nameDiv.textContent = allAnimals[i].name;
+    nameDiv.textContent = parsedAnimals[i].name;
     nameDiv.classList.add('name-cell');
     nameDiv.classList.add('table-cell');
     let speciesDiv = document.createElement('div');
-    speciesDiv.textContent = allAnimals[i].species;
+    speciesDiv.textContent = parsedAnimals[i].species;
     speciesDiv.classList.add('species-cell');
     speciesDiv.classList.add('table-cell');
     let ageDiv = document.createElement('div');
-    ageDiv.textContent = allAnimals[i].age;
+    ageDiv.textContent = parsedAnimals[i].age;
     ageDiv.classList.add('age-cell');
     ageDiv.classList.add('table-cell');
     let interestDiv = document.createElement('div');
-    interestDiv.textContent = allAnimals[i].interest;
+    interestDiv.textContent = parsedAnimals[i].interest;
     interestDiv.classList.add('interest-cell');
     interestDiv.classList.add('table-cell');
 
