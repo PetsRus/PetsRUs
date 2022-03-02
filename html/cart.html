@@ -12,7 +12,7 @@
 <body>
   <header>
     <nav>
-      <img src="imgs/Logo.png" alt="Logo" id="Logo">
+      <img src="../imgs/Logo.png" alt="Logo" id="Logo">
       <ul>
         <li><a href="../index.html">Home</a> </li>
         <li><a href="html/aboutus.html">About Us</a></li>
@@ -22,8 +22,10 @@
 
   <main>
     <div>
-      <h1>Cart</h1>
-      <p>Please review your cart items before checking out:</p>
+      <div id="cart-header">
+        <h1>Cart Items:</h1>
+        <p>Please review your cart items before checking out:</p>
+      </div>
     </div>
     <div id="table-container">
       <div class="name-title-cell table-cell">Name</div>
@@ -31,12 +33,14 @@
       <div class="age-title-cell table-cell">Age</div>
       <div class="interest-title-cell table-cell">Interest</div>
     </div>
-    <form action="/actions_page.php">
-      <label for="name:">Name:</label>
-      <input type="text" id="name"><br>
-      <label for="email:">Email address:</label>
-      <input type="text" id="email"><br>
-    </form>
+    <div id="form">
+      <!-- <form action="/actions_page.php"> -->
+        <label for="name:">Name:</label>
+        <input type="text" id="name"><br>
+        <label for="email:">Email address:</label>
+        <input type="text" id="email"><br>
+      </form>
+    </div>
     <div id="button-container">
       <button id="checkout-button">Checkout</button>
       <button id="clear-cart-button">Clear Cart</button>
