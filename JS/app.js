@@ -1,5 +1,4 @@
 'use strict';
-
 let allAnimals = [];
 
 //constructor for all animals 
