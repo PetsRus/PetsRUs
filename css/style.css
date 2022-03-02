@@ -46,8 +46,12 @@ main{
   padding-top: 35px;
   background-color: #7ECED1;
   font-family: 'Patrick Hand', 'sans-serif';
+  margin: auto;
+  width: 1020px;
 }
 
-
+body{
+  background-color:#ec9883;
+}
 
 /* FOOTER STLYING */
