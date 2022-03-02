@@ -1,4 +1,5 @@
 'use strict';
+console.log('app.js');
 let allAnimals = [];
 
 let buyerObj = [];
