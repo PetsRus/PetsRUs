@@ -34,7 +34,8 @@ nav ul li:hover{
 
 header ul{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  column-gap: 1em;
   list-style: none;
 }
 
