@@ -27,8 +27,6 @@ let parsedAnimals = JSON.parse(retrievedAnimals);
 
 
 
-// need something that populates parsed data into a table
-
 
 function showCart() {
   //get selected animal array from local storage and deserialize it from json
@@ -90,6 +88,22 @@ function checkoutButton(event) {
 
 function clearButton(event) {
   localStorage.clear();
+  // let allClear = document.querySelectorAll('.name-cell .species-cell .age-cell .interest-cell');
+  // console.log(allClear); 
+  // allClear.innerHTML = ''; 
+  window.location.reload(); 
+
+  // let nameCells = document.querySelectorAll('.name-cell'); 
+  // nameCells.innerHTML = ''; 
+  
+  // let speciesCells = document.querySelectorAll('.species-cell'); 
+  // speciesCells.innerHTML = ''; 
+
+  // let ageCells = document.querySelectorAll('.age-cell'); 
+  // ageCells.innerHTML = ''; 
+
+  // let interestCells = document.querySelectorAll('.interest-cell'); 
+  // interestCells.innerHTML = ''; 
 }
 // clearButton();
 

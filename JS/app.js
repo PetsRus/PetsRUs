@@ -107,25 +107,46 @@ function renderAnimals (){
 
 renderAnimals();
 
-// event listener for user to select pet and add to cart, notifies selection with alert
-function handleClick(event) {
-  if (event.target.src === undefined){
-    alert('Please click on a photo of animal to add to cart.');
-  } else {
-    let imgClicked = event.target.src;
-    let imgClickedName = event.target.alt;
-    alert(`You've added ${event.target.alt} to your cart!`);
-    for (let i = 0; i < allAnimals.length; i++){
-      let currentAnimal = allAnimals[i];
-      if (imgClickedName === allAnimals[i].name){
-        buyerObj.push(allAnimals[i]);
+// // event listener for user to select pet and add to cart, notifies selection with alert
+
+// function handleClick(event) {
+//   if (event.target.src === undefined){
+//     alert('Please click on a photo of animal to add to cart.');
+//   } else {
+//     let imgClicked = event.target.src;
+//     let imgClickedName = event.target.alt;
+//     alert(`You've added ${event.target.alt} to your cart!`);
+//     for (let i = 0; i < allAnimals.length; i++){
+//       let currentAnimal = allAnimals[i];
+//       if (imgClickedName === allAnimals[i].name){
+//         buyerObj.push(allAnimals[i]);
+//       }
+//     }
+//   }
+//   let stringifiedAnimals = JSON.stringify(buyerObj);
+//   localStorage.setItem('stringifiedAnimalsKey', stringifiedAnimals);
+//   }
+
+
+  function handleClick(event) {
+    if (event.target.src === undefined){
+      alert('Please click on a photo of animal to add to cart.');
+    } else {
+      let imgClicked = event.target.src;
+      let imgClickedName = event.target.alt;
+      alert(`You've added ${event.target.alt} to your cart!`);
+      for (let i = 0; i < allAnimals.length; i++){
+        let currentAnimal = allAnimals[i];
+        if (imgClickedName === currentAnimal.name){
+          buyerObj.push(currentAnimal);
+        }
       }
     }
-  }
-  let stringifiedAnimals = JSON.stringify(buyerObj);
-  localStorage.setItem('stringifiedAnimalsKey', stringifiedAnimals);
-  }
-
+    let uniqueObjects = [...new Set(buyerObj)]; 
+    let stringifiedAnimals = JSON.stringify(uniqueObjects);
+    localStorage.setItem('stringifiedAnimalsKey', stringifiedAnimals);
+    }
+   
 
 animalProfilesContainer.addEventListener('click', handleClick);
 
