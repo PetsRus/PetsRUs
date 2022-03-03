@@ -122,9 +122,11 @@ function handleClick(event) {
       }
     }
   }
+
+  let uniqueObjects = [...new Set(buyerObj)];
   let stringifiedAnimals = JSON.stringify(buyerObj);
   localStorage.setItem('stringifiedAnimalsKey', stringifiedAnimals);
-  }
+}
 
 
 animalProfilesContainer.addEventListener('click', handleClick);
