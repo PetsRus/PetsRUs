@@ -88,6 +88,7 @@ function checkoutButton(event) {
 
 function clearButton(event) {
   localStorage.clear();
+<<<<<<< HEAD
   // let allClear = document.querySelectorAll('.name-cell .species-cell .age-cell .interest-cell');
   // console.log(allClear); 
   // allClear.innerHTML = ''; 
@@ -104,6 +105,9 @@ function clearButton(event) {
 
   // let interestCells = document.querySelectorAll('.interest-cell'); 
   // interestCells.innerHTML = ''; 
+=======
+  window.location.reload();
+>>>>>>> 0f410f957a56b53d898274b4748008732b95d5d0
 }
 // clearButton();
 

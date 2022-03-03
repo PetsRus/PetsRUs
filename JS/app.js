@@ -142,13 +142,29 @@ renderAnimals();
         }
       }
     }
+<<<<<<< HEAD
     let uniqueObjects = [...new Set(buyerObj)]; 
     let stringifiedAnimals = JSON.stringify(uniqueObjects);
     localStorage.setItem('stringifiedAnimalsKey', stringifiedAnimals);
     }
    
+=======
+  }
+
+  let uniqueObjects = [...new Set(buyerObj)];
+  let stringifiedAnimals = JSON.stringify(uniqueObjects);
+  localStorage.setItem('stringifiedAnimalsKey', stringifiedAnimals);
+}
+
+//  let message = `Thanks ${name1}! We will contact you at ${email1}`;
+//   let message-container = document.getElementById('message');
+//   message-container.textContent = message;
+//   let name1 = 'Michael';
+//   let email1 = 'blob@gmail.com';
+>>>>>>> 0f410f957a56b53d898274b4748008732b95d5d0
 
 animalProfilesContainer.addEventListener('click', handleClick);
+// console.log();
 
 
 
