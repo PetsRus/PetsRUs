@@ -135,6 +135,7 @@ function handleClick(event) {
 //   let email1 = 'blob@gmail.com';
 
 animalProfilesContainer.addEventListener('click', handleClick);
+// console.log();
 
 
 
