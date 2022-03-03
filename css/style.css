@@ -407,6 +407,7 @@ main p {
 
 .bio-img{
   width: 300px;
+  border-radius: 25px;
 }
 
 .social-link-img{
