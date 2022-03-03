@@ -90,6 +90,7 @@ function checkoutButton(event) {
 
 function clearButton(event) {
   localStorage.clear();
+  window.location.reload();
 }
 // clearButton();
 
