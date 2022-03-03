@@ -84,6 +84,7 @@ showCart();
 function checkoutButton(event) {
   // window.location.pathname = 'thankYou.html';
   localStorage.clear();
+  window.location.reload();
 }
 // checkoutButtons();
 
