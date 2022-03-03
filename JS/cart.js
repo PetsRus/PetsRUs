@@ -84,6 +84,7 @@ showCart();
 function checkoutButton(event) {
   // window.location.pathname = 'thankYou.html';
   localStorage.clear();
+  window.location.reload();
 }
 // checkoutButtons();
 
@@ -98,3 +99,5 @@ checkoutCartButton.addEventListener('click', checkoutButton);
 
 let clearCartButton = document.getElementById('clear-cart-button');
 clearCartButton.addEventListener('click', clearButton);
+
+// console.log();

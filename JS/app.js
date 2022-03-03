@@ -122,9 +122,11 @@ function handleClick(event) {
       }
     }
   }
+
+  let uniqueObjects = [...new Set(buyerObj)];
   let stringifiedAnimals = JSON.stringify(buyerObj);
   localStorage.setItem('stringifiedAnimalsKey', stringifiedAnimals);
-  }
+}
 
 //  let message = `Thanks ${name1}! We will contact you at ${email1}`;
 //   let message-container = document.getElementById('message');

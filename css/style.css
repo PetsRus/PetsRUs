@@ -25,6 +25,9 @@ nav ul li{
   border-radius: 5px;
   /* font-family: 'Patrick Hand', 'cursive'; */
 }
+nav ul li a {
+  text-decoration: none;
+}
 
 nav ul li:hover{
   background-color: #a8e1df;
@@ -142,7 +145,17 @@ main h2{
   justify-content: space-evenly;
 }
 #group1{
-  padding-left: 315px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 125px;
+  border-style: groove;
+  border-width: 10px;
+  /* padding-left: 315px; */
+  /* border-style: groove; */
+  /* border-color: black; */
+  /* border-width: 20px; */
 }
 .div4{
   margin-top: 30px;
@@ -161,6 +174,7 @@ main h2{
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 #profiles{
@@ -173,6 +187,7 @@ main h2{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 }
 
 #profiles img{
@@ -341,14 +356,26 @@ footer {
 } */
 
 #to-cart {
-  margin-top: 30px;
+  background-color: #B3EFB2;
+  color: #48ACF0;
+  width: max-content;
+  font-size: 30px;
+  padding: 10px 30px;
+  margin-top: 33px;
+  transition: 350ms;
+  border-radius: 5px;
+  transition: 350ms;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: row;
   text-align: center;
   justify-content: center;
-  padding: 10px 30px;
-  transition: 350ms;
   cursor: pointer;
-  border-radius: 5px;
+}
+#to-cart a{
+  text-decoration: none;
 }
 
 /* About Us */
@@ -387,4 +414,30 @@ main p {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
+}
+
+/* THANK YOU CSS */
+
+#home-reset{
+  background-color: #6826b4;
+  width: max-content;
+  font-size: 50px;
+  padding: 10px 30px;
+  margin-top: 33px;
+  transition: 350ms;
+  border-radius: 5px;
+  transition: 350ms;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#home-reset a{
+  transition: 500ms;
+  text-decoration: none;
+  color: #000000;
 }
