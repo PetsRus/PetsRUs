@@ -283,3 +283,9 @@ footer {
   justify-content: end;
   position: absolute;
 }
+
+/* this was Ryan who saved us a lot of pain and suffering, good job ryan RYAN WILLS IT!!!!! */
+#checkout-button a {
+  text-decoration: none;
+  color: black;
+}
