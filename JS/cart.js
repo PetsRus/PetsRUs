@@ -73,11 +73,28 @@ function showCart() {
     tableContainer.appendChild(interestDiv);
   }
 
-  let checkoutButton = document.getElementById('checkout-button');
-  checkoutButton.addEventListener('click', checkoutClick);
-  let clearCartButton = document.getElementById('clear-cart-button');
-  clearCartButton.addEventListener('click', clearCartClick);
+  // let checkoutButton = document.getElementById('checkout-button');
+  // checkoutButton.addEventListener('click', checkoutClick);
+  // let clearCartButton = document.getElementById('clear-cart-button');
+  // clearCartButton.addEventListener('click', clearCartClick);
 }
 
 showCart();
 
+function checkoutButton(event) {
+  // window.location.pathname = 'thankYou.html';
+  localStorage.clear();
+}
+// checkoutButtons();
+
+
+function clearButton(event) {
+  localStorage.clear();
+}
+// clearButton();
+
+let checkoutCartButton = document.getElementById('checkout-button');
+checkoutCartButton.addEventListener('click', checkoutButton);
+
+let clearCartButton = document.getElementById('clear-cart-button');
+clearCartButton.addEventListener('click', clearButton);
