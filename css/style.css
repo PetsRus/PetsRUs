@@ -161,6 +161,7 @@ main h2{
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 #profiles{
@@ -331,7 +332,17 @@ footer {
 #to-cart {
   font-size: 30px;
   margin-top: 30px;
-  margin-left: 40px;
+  /* display: flex; */
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  /* background-color: #B3EFB2; */
+  /* color: #48ACF0; */
+  /* width: max-content; */
+  padding: 10px 30px;
+  transition: 350ms;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* About Us */
