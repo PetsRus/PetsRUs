@@ -126,6 +126,12 @@ function handleClick(event) {
   localStorage.setItem('stringifiedAnimalsKey', stringifiedAnimals);
   }
 
+//  let message = `Thanks ${name1}! We will contact you at ${email1}`;
+//   let message-container = document.getElementById('message');
+//   message-container.textContent = message;
+ 
+//   let name1 = 'Michael';
+//   let email1 = 'blob@gmail.com';
 
 animalProfilesContainer.addEventListener('click', handleClick);
 

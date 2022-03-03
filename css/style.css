@@ -182,6 +182,18 @@ main h2{
   margin-right: auto;
 }
 
+/* #proceed-button {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.9em;
+  justify-content: center;
+  margin-left: 3em;
+  margin-right: 5em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 1em;
+} */
+
 /* CART CSS */
 
 #cart-header {
@@ -329,9 +341,14 @@ footer {
 } */
 
 #to-cart {
-  font-size: 30px;
   margin-top: 30px;
-  margin-left: 40px;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  padding: 10px 30px;
+  transition: 350ms;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* About Us */
@@ -363,7 +380,7 @@ main p {
 }
 
 .social-link-img{
-  width: 100px;
+  width: 40px;
 }
 
 .social-container{
