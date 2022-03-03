@@ -5,77 +5,59 @@
   <title>Cart Page</title>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
+  <!-- <link rel="stylesheet" href="../css/cart.css"> -->
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-  <style type="text/css">
-    /* .name-title-cell {
-      background-color: darkgrey;
-      font-weight: bold;
-      grid-column-start: 1;
-    }
-
-    .species-title-cell {
-      background-color: darkgrey;
-      font-weight: bold;
-      grid-column-start: 2;
-    }
-
-    .name-cell {
-      grid-column-start: 1;
-    }
-
-    .species-cell {
-      grid-column-start: 2;
-    } */
-  </style>
-
-
-
-
 </head>
 
 <body>
   <header>
     <nav>
-      <img src="imgs/Logo.png" alt="Logo" id="Logo">
+      <img src="../imgs/Logo.png" alt="Logo" id="Logo">
       <ul>
-        <li><a href="index.html">Home</a> </li>
-        <li><a href="html/aboutus.html">About Us</a></li>
+        <li><a href="../index.html">Home</a> </li>
+        <li><a href="aboutus.html">About Us</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div>
-      <h1>Cart</h1>
-      <p>Please review your cart items for checkout:</p>
+    <div id="cart-header">
+      <h1>Cart Items:</h1>
+      <p>Please review your cart items before checking out:</p>
     </div>
-    <div id="table-container" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto;">
-      <div class="name-title-cell">Name</div>
-      <div class="species-title-cell">Species</div>
+    <div id="table-container">
+      <div class="name-title-cell table-cell">Name</div>
+      <div class="species-title-cell table-cell">Species</div>
+      <div class="age-title-cell table-cell">Age</div>
+      <div class="interest-title-cell table-cell">Interest</div>
     </div>
-    <form action="/actions_page.php">
+    <div id="form">
+      <!-- <form action="/actions_page.php"> -->
       <label for="name:">Name:</label>
-      <input type="text" id="name"><br>
+      <input type="text" id="name">
       <label for="email:">Email address:</label>
-      <input type="text" id="email"><br>
-    </form>
+      <input type="text" id="email">
+      </form>
+    </div>
     <div id="button-container">
-      <button id="checkout-button">Checkout</button>
+      <button id="checkout-button"><a href="thankYou.html">Checkout</a></button>
       <button id="clear-cart-button">Clear Cart</button>
     </div>
+    <div id="to-cart"><a href="cart.html">Proceed to cart</a></div>>
+
   </main>
 
   <footer>
     <ul>
       <li>
-        <h2>Contact Us</h2>
+        <h2>Contact Us</h2><br>
       </li>
-      <li>206-123-9876</li>
-      <li>Contactus@PetsRUs.com</li>
-      <li>17 Adoption Way, Seattle WA, 98096</li>
+      <li>Tel: 206-123-9876</li>
+      <li>Email: Contactus@PetsRUs.com</li>
+      <li>Address: 17 Adoption Way, Seattle WA, 98096</li>
     </ul>
   </footer>
-
+  <script src="../JS/cart.js"></script>
 </body>
 
 </html>

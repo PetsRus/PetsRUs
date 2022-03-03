@@ -1,6 +1,9 @@
 'use strict';
-
+console.log('app.js');
 let allAnimals = [];
+
+let buyerObj = [];
+
 
 //constructor for all animals 
 function Animal (name, species, age, interest){
@@ -77,6 +80,7 @@ function renderAnimals (){
   for (let i = 0; i < allAnimals.length; i++){
     let currentImgLoc = document.createElement('img');
     currentImgLoc.src = allAnimals[i].src;
+    currentImgLoc.alt = allAnimals[i].name;
     let currentCapt = document.createElement('figcaption');
 
     let ul = document.createElement('ul');
@@ -99,6 +103,30 @@ function renderAnimals (){
 }
 
 renderAnimals();
+
+// event listener for user to select pet and add to cart, notifies selection with alert
+function handleClick(event) {
+  if (event.target.src === undefined){
+    alert('Please click on a photo of animal to add to cart.');
+  } else {
+    let imgClicked = event.target.src;
+    let imgClickedName = event.target.alt;
+    alert(`You've added ${event.target.alt} to your cart!`);
+    for (let i = 0; i < allAnimals.length; i++){
+      let currentAnimal = allAnimals[i];
+      if (imgClickedName === allAnimals[i].name){
+        buyerObj.push(allAnimals[i]);
+      }
+    }
+  }
+  let stringifiedAnimals = JSON.stringify(buyerObj);
+  localStorage.setItem('stringifiedAnimalsKey', stringifiedAnimals);
+  }
+
+
+myContainer.addEventListener('click', handleClick);
+
+
 
 
 
