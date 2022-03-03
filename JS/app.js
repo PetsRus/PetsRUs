@@ -47,7 +47,7 @@ let han = new Animal('han','cat', 10, 'zoomies');
 // console.log(allAnimals); 
 // let imgWindow = document.getElementById('img-one');
 
-let myContainer = document.getElementById('profiles');
+let animalProfilesContainer = document.getElementById('profiles');
 
 
 // function renderTucker (){
@@ -78,6 +78,8 @@ let myContainer = document.getElementById('profiles');
 // helper function to render images of all pets and information in a `<ul></ul>`
 function renderAnimals (){
   for (let i = 0; i < allAnimals.length; i++){
+    let outerDiv = document.createElement('div');
+
     let currentImgLoc = document.createElement('img');
     currentImgLoc.src = allAnimals[i].src;
     currentImgLoc.alt = allAnimals[i].name;
@@ -85,20 +87,21 @@ function renderAnimals (){
 
     let ul = document.createElement('ul');
     let li1 = document.createElement('li');
-    li1.textContent = allAnimals[i].name;
+    li1.textContent = `Name: ${allAnimals[i].name}` ;
     ul.appendChild(li1);
 
     let li2 = document.createElement('li');
-    li2.textContent = allAnimals[i].age;
+    li2.textContent = `Age: ${allAnimals[i].age}`;
     ul.appendChild(li2);
 
     let li3 = document.createElement('li');
-    li3.textContent = allAnimals[i].interest;
+    li3.textContent = `Interest: ${allAnimals[i].interest}`;
     ul.appendChild(li3);
 
     currentCapt.appendChild(ul);
-    myContainer.appendChild(currentImgLoc);
-    myContainer.appendChild(currentCapt);
+    outerDiv.appendChild(currentImgLoc);
+    outerDiv.appendChild(currentCapt);
+    animalProfilesContainer.appendChild(outerDiv);
   }
 }
 
@@ -124,7 +127,7 @@ function handleClick(event) {
   }
 
 
-myContainer.addEventListener('click', handleClick);
+animalProfilesContainer.addEventListener('click', handleClick);
 
 
 
