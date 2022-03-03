@@ -99,3 +99,5 @@ checkoutCartButton.addEventListener('click', checkoutButton);
 
 let clearCartButton = document.getElementById('clear-cart-button');
 clearCartButton.addEventListener('click', clearButton);
+
+// console.log();
